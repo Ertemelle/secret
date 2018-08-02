@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :current_user?, only: [:edit]
+
   def index
   end
 
@@ -26,5 +28,12 @@ class UsersController < ApplicationController
   end
 
   def destroy
+  end
+
+  def current_user?
+    if current_user != nil || current_user.email != User.find(params[:id]).email
+      redirect_to home_path
+    else
+    end
   end
 end
