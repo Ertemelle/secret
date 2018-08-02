@@ -1,16 +1,16 @@
-<h1>REJOINS-NOUS !</h1>
+<h1><center><strong>REJOINS-NOUS !</strong></center></h1>
 <%= form_for @user do |f| %>
   <div class='form-group'>
-    <label>Ton email</label>
-    <%= f.text_field :email, class: 'form-control', placeholder: 'toto@mail.com'%>
+    <label><strong>Ton email</strong></label>
+    <center><%= f.text_field :email, class: 'form-control', placeholder: 'toto@mail.com'%></center>
   </div>
   <div class='form-group'>
-    <label>Mot de Passe</label>
-    <%= f.text_field :password, class: 'form-control', placeholder: '*********'%>
+    <label><strong>Mot de Passe</strong></label>
+    <center><%= f.text_field :password, class: 'form-control', placeholder: '*********'%></center>
   </div>
   <div class='form-group'>
-    <label>Confirmes ton mot de passe</label>
-    <%= f.text_field :password_confirmation, class: 'form-control', placeholder: '**********'%>
+    <label><strong>Confirmes ton mot de passe</strong></label>
+    <center><%= f.text_field :password_confirmation, class: 'form-control', placeholder: '**********'%></center>
   </div>
-  <button type='submit' class='btn btn-primary'>Enregistrer</button>    
+  <center><button type='submit' class='btn btn-primary'><strong>Enregistrer</strong></button></center>  
 <% end %>
