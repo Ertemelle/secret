@@ -7,6 +7,8 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       log_in user
+      params[:session][:remember_me] == '1' ? remember(user) : forget(user)
+      remember user
       redirect_to secret_path
       puts 'I AM IN'
     else
@@ -18,6 +20,5 @@ class SessionsController < ApplicationController
   def destroy
     log_out if logged_in?
     redirect_to home_path
-    puts "je suis plus logerrrr"
   end
 end
