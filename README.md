@@ -1,24 +1,10 @@
-# README
+<h1>Projet secret</h1>
+On a eu des problèmes avec Heroku, on a pas réussi à les regler, alors je t'invite à regarder notre site en localhost::3000.
+Pour celà, fait un rails db:migrate
+puis, un rails server 
+et tappe dans ton navigateur : localhost:3000
+Et hop ! Magie ! Un site ! 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Le bisou.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Made with love in Rennes, by: Romains, Sandrine & Léona :)
