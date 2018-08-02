@@ -1,17 +1,27 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<nav class="navbar navbar-light" style="background-color: #F9AB9F;">
+
   <div class="container">
     <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", "/" %></li>
+      <ul class="nav navbar-light" style: >
+       <li class="nav-item">
+        <a class="nav-link" <%= link_to "Home", "/" %></a>
+      </li>
         <% if logged_in? %>
-          <li><%= link_to "Users", '#' %></li>
-          <li><%= link_to "Profile", current_user %></li>
-          <li><%= link_to "Settings", '#' %></li>
-          <li><%= link_to "Log out", logout_path, method: :delete %></li>          
+          <li class="nav-item">
+            <a class="nav-link" <%= link_to " Secret ", secret_path %></a>
+          </li>
+          <li class="nav-item">
+           <a class="nav-link"  <%= link_to " Profile ", current_user %></a>
+         </li>
+          <li class="nav-item">
+           <a <%= link_to " Log out ", logout_path, method: :delete %> </a>  
+         </li>
         <% else %>
-          <li><%= link_to "Log in", login_path %></li>
+          <li class="nav-item">
+           <a class="nav-link"  <%= link_to " Log in ", login_path %></a>
+         </li>
         <% end %>
       </ul>
     </nav>
   </div>
-</header>
+</nav>
