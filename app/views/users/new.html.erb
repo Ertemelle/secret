@@ -1,2 +1,16 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>REJOINS-NOUS !</h1>
+<%= form_for @user do |f| %>
+  <div class='form-group'>
+    <label>Ton email</label>
+    <%= f.text_field :email, class: 'form-control', placeholder: 'toto@mail.com'%>
+  </div>
+  <div class='form-group'>
+    <label>Mot de Passe</label>
+    <%= f.text_field :password, class: 'form-control', placeholder: '*********'%>
+  </div>
+  <div class='form-group'>
+    <label>Confirmes ton mot de passe</label>
+    <%= f.text_field :password_confirmation, class: 'form-control', placeholder: '**********'%>
+  </div>
+  <button type='submit' class='btn btn-primary'>Enregistrer</button>    
+<% end %>
