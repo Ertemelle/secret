@@ -14,6 +14,12 @@ end
 group :production do
   gem 'pg'
 end
+
+gem 'jquery-rails'
+
+gem 'rails-ujs'
+
+gem 'bootstrap-sass'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
