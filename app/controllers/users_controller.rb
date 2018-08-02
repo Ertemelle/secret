@@ -4,7 +4,12 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(email: params[:user][:email], password: params[:user][:password])
-    @user.save
+    if @user.save
+      log_in @user
+      redirect_to secret_path
+    else
+      render 'new'
+    end
   end
 
   def new
